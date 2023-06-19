@@ -1,0 +1,22 @@
+CREATE TABLE hat_store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, size TEXT);
+INSERT INTO hat_store VALUES (1, "Ball Caps", 10, 7.99, "Medium"); 
+INSERT INTO hat_store VALUES (2, "Beanies", 17, 9.99, "Small");
+INSERT INTO hat_store VALUES (3, "Flat Bills", 5, 7.50, "Large");
+INSERT INTO hat_store VALUES (4, "Top Hats", 8, 22, "Medium");
+INSERT INTO hat_store VALUES (5, "Baby Hats", 12, 3.99, "Small");
+INSERT INTO hat_store VALUES (6, "Sock Hat", 13, 14, "Large");
+INSERT INTO hat_store VALUES (7, "Winter Hat", 23, 15.99, "Small");
+INSERT INTO hat_store VALUES (8, "Raccoon Hat", 6, 20.99, "Small");
+INSERT INTO hat_store VALUES (9, "Earmuffs", 17, 12.99, "Small");
+INSERT INTO hat_store VALUES (10, "Headbands", 38, 2.99, "Small");
+INSERT INTO hat_store VALUES (11, "Party Hats", 23, 1.99, "Small");
+INSERT INTO hat_store VALUES (12, "Santa Hat", 4, 23, "Large");
+INSERT INTO hat_store VALUES (13, "Witch Hat", 6, 20, "Large");
+INSERT INTO hat_store VALUES (14, "Cat ears", 14, 13.50, "Medium");
+INSERT INTO hat_store VALUES (15, "Derby Hat", 12, 39.99, "Small");
+
+SELECT * FROM hat_store;
+
+SELECT * FROM hat_store ORDER BY price asc;
+
+SELECT size, SUM(quantity) FROM hat_store GROUP BY size;
