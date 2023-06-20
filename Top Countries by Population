@@ -246,3 +246,23 @@ SELECT AVG(net_migrants) FROM countries;
 SELECT AVG(fertility_rate) FROM countries;
 SELECT AVG(median_age) FROM countries;
 SELECT AVG(percent_of_world_pop) FROM countries;
+
+SELECT * FROM countries WHERE population > 38774455;
+SELECT * FROM countries WHERE population < 38774455;
+
+/* CASE */
+SELECT name,
+
+    CASE
+    
+        WHEN population > 38774455 THEN "above average"
+        WHEN population < 38774455 THEN "below average"
+
+END AS "population_avg_range"
+
+FROM countries
+GROUP BY name;
+
+SELECT * FROM countries WHERE population > 38774455 AND fertility_rate > 2.7;
+
+SELECT * FROM countries WHERE net_migrants < 0 OR population_change < 0;
